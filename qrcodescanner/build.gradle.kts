@@ -67,7 +67,7 @@ publishing {
             }
             groupId = "com.github.fadhyyusuf"
             artifactId = "qrcodescanner"
-            version = "1.0.0"
+            version = "1.0.1"
         }
     }
 }
