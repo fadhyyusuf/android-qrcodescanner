@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "com.fy.qrcodescanner"
-    compileSdk = 35
+    compileSdk = 34
 
     defaultConfig {
         minSdk = 27
@@ -67,7 +67,7 @@ publishing {
             }
             groupId = "com.github.fadhyyusuf"
             artifactId = "qrcodescanner"
-            version = "1.0.1"
+            version = "1.0.2"
         }
     }
 }
