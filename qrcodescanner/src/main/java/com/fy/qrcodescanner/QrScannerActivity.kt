@@ -28,6 +28,7 @@ class QrScannerActivity : AppCompatActivity(), QrScannerListener {
         }
         setResult(Activity.RESULT_OK, resultIntent)
         finish()
+
     }
 
     override fun onDestroy() {

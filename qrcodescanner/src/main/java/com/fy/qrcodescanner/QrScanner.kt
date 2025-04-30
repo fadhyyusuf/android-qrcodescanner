@@ -94,5 +94,4 @@ class QrScanner(private val context: Context) {
         cameraProvider?.unbindAll()
         cameraExecutor.shutdown()
     }
-
 }
