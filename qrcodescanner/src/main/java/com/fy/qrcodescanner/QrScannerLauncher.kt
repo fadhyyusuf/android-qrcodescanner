@@ -38,8 +38,12 @@ object QrScannerLauncher {
             ) == PackageManager.PERMISSION_GRANTED
         ) {
             val intent = Intent(context, QrScannerActivity::class.java).apply {
-                // Clear any existing instances of the QR scanner activity
-                addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                // Completely clear the activity stack and start fresh
+                addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or
+                        Intent.FLAG_ACTIVITY_CLEAR_TASK or
+                        Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                // Add a timestamp parameter to force a fresh instance
+                putExtra("restart_timestamp", System.currentTimeMillis())
             }
             scannerLauncher.launch(intent)
         } else {
@@ -47,5 +51,10 @@ object QrScannerLauncher {
         }
     }
 
+    fun stopScanner(context: Context) {
+        // Send a broadcast intent to tell QrScannerActivity to close itself
+        val intent = Intent("com.fy.qrcodescanner.ACTION_CLOSE_SCANNER")
+        context.sendBroadcast(intent)
+    }
 
 }
