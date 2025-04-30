@@ -25,8 +25,10 @@ class QrScannerActivity : AppCompatActivity(), QrScannerListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_qr_scanner)
-        registerReceiver(closeReceiver, IntentFilter("com.fy.qrcodescanner.ACTION_CLOSE_SCANNER"))
-
+        if (intent?.action == "com.fy.qrcodescanner.ACTION_STOP_SCANNER") {
+            finish()
+            return
+        }
         // Initialize the PreviewView FIRST
         previewView = findViewById(R.id.previewView)
 
