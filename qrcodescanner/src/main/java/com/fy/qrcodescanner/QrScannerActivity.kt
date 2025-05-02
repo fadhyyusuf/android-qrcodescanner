@@ -53,6 +53,9 @@ class QrScannerActivity : AppCompatActivity(), QrScannerListener {
         } catch (e: Exception) {
             // Receiver might not be registered
         }
-        qrScanner.stop()
+
+        if (::qrScanner.isInitialized) {
+            qrScanner.stop()
+        }
     }
 }
