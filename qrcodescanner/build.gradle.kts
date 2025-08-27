@@ -50,10 +50,10 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    implementation("androidx.camera:camera-core:1.3.0")
-    implementation("androidx.camera:camera-camera2:1.3.0")
-    implementation("androidx.camera:camera-lifecycle:1.3.0")
-    implementation("androidx.camera:camera-view:1.3.0")
+    implementation("androidx.camera:camera-core:1.5.0-rc01")
+    implementation("androidx.camera:camera-camera2:1.5.0-rc01")
+    implementation("androidx.camera:camera-lifecycle:1.5.0-rc01")
+    implementation("androidx.camera:camera-view:1.5.0-rc01")
 
     implementation("com.google.mlkit:barcode-scanning:17.3.0")
 
@@ -67,7 +67,7 @@ publishing {
             }
             groupId = "com.github.fadhyyusuf"
             artifactId = "qrcodescanner"
-            version = "1.1.5"
+            version = "1.1.6"
         }
     }
 }
