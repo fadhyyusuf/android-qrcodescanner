@@ -55,7 +55,7 @@ dependencies {
     implementation("androidx.camera:camera-lifecycle:1.3.0")
     implementation("androidx.camera:camera-view:1.3.0")
 
-    implementation("com.google.mlkit:barcode-scanning:17.2.0")
+    implementation("com.google.mlkit:barcode-scanning:17.3.0")
 
 }
 
@@ -67,7 +67,7 @@ publishing {
             }
             groupId = "com.github.fadhyyusuf"
             artifactId = "qrcodescanner"
-            version = "1.1.4"
+            version = "1.1.5"
         }
     }
 }
